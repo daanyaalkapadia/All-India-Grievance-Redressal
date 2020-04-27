@@ -1,0 +1,47 @@
+<div class="bg-dark" style="height: 70px;">
+    <h2 class="text-center text-white" style="padding-top: 10px;">All India Greviance Redressal App</h2>
+</div>
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3"><i class="fas fa-key"></i>  Reset Password</h1>
+      <form action="/reset" method="POST">
+        <div class="form-group">
+          <label for="email">One Time Password</label>
+          <input
+            type="number"
+            id="email"
+            name="otp"
+            class="form-control"
+            placeholder="Enter OTP"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Enter New Password</label>
+          <input
+            type="password"
+            id="password"
+            name="newpassword1"
+            class="form-control"
+            placeholder="Enter New Password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Re Enter New Password</label>
+          <input
+            type="password"
+            id="password"
+            name="newpassword2"
+            class="form-control"
+            placeholder="Re-Enter New Password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Reset</button>
+        <br>
+        <%if (msg){ %>
+          <p class="text-danger"><%= msg %></p>
+        <% } %>
+      </form>
+    </div>
+  </div>
+</div>

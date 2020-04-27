@@ -1,0 +1,213 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-md navbar-light">
+  <button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse" data-target="#myNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- sidebar -->
+        <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+          <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border">
+            All India Grievance <br>Redressal App
+          </a>
+          <div class="bottom-border pb-3">
+            <p class="text-white text-center">Hello, <%=name%> !</p>
+          </div>
+          <ul class="navbar-nav flex-column mt-4">
+            <li class="nav-item">
+              <a href="/dashboard" class="nav-link text-white p-3 mb-2 sidebar-link">
+                <i class="fas fa-home text-light fa-lg mr-3"></i>
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/profile" class="nav-link text-white p-3 mb-2 sidebar-link">
+                <i class="fas fa-user text-light fa-lg mr-3"></i>
+                Profile
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white p-3 mb-2 current">
+                <i class="fas fa-chart-line text-light fa-lg mr-3"></i>
+                Analytics
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/pending" class="nav-link text-white p-3 mb-2 sidebar-link">
+                <i class="fas fa-hand-paper text-light fa-lg mr-3"></i>
+                Pending
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/redressed" class="nav-link text-white p-3 mb-2 sidebar-link">
+                <i class="far fa-check-circle text-light fa-lg mr-3"></i>
+                Redressed
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- end of sidebar -->
+
+        <!-- top-nav -->
+        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-dark fixed-top py-2 top-navbar">
+          <div class="row align-items-center">
+            <div class="col-md-4">
+              <h4 class="text-light text-uppercase mb-0">
+                Analytics
+              </h4>
+            </div>
+            <div class="col-md-5">
+              <h4 class="text-light text-uppercase text-center"><%=state%>-Admin</h4>
+            </div>
+            <div class="col-md-3">
+              <ul class="navbar-nav float-right">
+                <a href="/users/logout">
+                  <li class="nav-item ml-md-auto float-right">
+                    <i class="fas fa-sign-out-alt text-danger fa-lg"></i>
+                    <p class="float-right text-white">&nbsp LogOut</p>
+                  </li>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end of top-nav -->
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- end of navbar -->
+
+<!-- progress / task list -->
+<section>
+  <div class="container-fluid">
+    <div class="row mb-4 align-items-center">
+      <div class="padd">
+        <div class="bg-dark text-white p-4 rounded">
+          <h4 class="mb-5 text-center">Analysis by complaint type</h4>
+          <h6 class="mb-3">Solid Waste Management <%= totsol[0]%> - <%= totCmp[0] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold" style="width: <%= percentage[0]%>%">
+              <%= percentage[0]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Road and Traffic  <%= totsol[1]%> - <%= totCmp[1] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold bg-success" style="width: <%= percentage[1]%>%">
+              <%= percentage[1]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Water Supply  <%= totsol[2]%> - <%= totCmp[2] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold bg-danger" style="width: <%= percentage[2]%>%">
+              <%= percentage[2]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Buildings  <%= totsol[3]%> - <%= totCmp[3] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold bg-info" style="width: <%= percentage[3]%>%">
+              <%= percentage[3]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Drainage  <%= totsol[4]%> - <%= totCmp[4] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold" style="width: <%= percentage[4]%>%">
+              <%= percentage[4]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Storm Water Drain  <%= totsol[5]%> - <%= totCmp[5] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold bg-success" style="width: <%= percentage[5]%>%">
+              <%= percentage[5]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Factories  <%= totsol[6]%> - <%= totCmp[6] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold bg-info" style="width: <%= percentage[6]%>%">
+              <%= percentage[6]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Licence  <%= totsol[7]%> - <%= totCmp[7] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold" style="width: <%= percentage[7]%>%">
+              <%= percentage[7]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Colony Officer  <%= totsol[8]%> - <%= totCmp[8] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold bg-info" style="width: <%= percentage[8]%>%">
+              <%= percentage[8]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Pest Control  <%= totsol[9]%> - <%= totCmp[9] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold bg-success" style="width: <%= percentage[9]%>%">
+              <%= percentage[9]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Repairs to Municipal Property  <%= totsol[10]%> - <%= totCmp[10] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold" style="width: <%= percentage[10]%>%">
+              <%= percentage[10]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Health  <%= totsol[11]%> - <%= totCmp[11] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold bg-info" style="width: <%= percentage[11]%>%">
+              <%= percentage[11]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Garden and Tree  <%= totsol[12]%> - <%= totCmp[12] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold bg-info" style="width: <%= percentage[12]%>%">
+              <%= percentage[12]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Encroachment  <%= totsol[13]%> - <%= totCmp[13] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold bg-success" style="width: <%= percentage[13]%>%">
+              <%= percentage[13]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Shops and Establishment  <%= totsol[14]%> - <%= totCmp[14] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold bg-info" style="width: <%= percentage[14]%>%">
+              <%= percentage[14]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Estate  <%= totsol[15]%> - <%= totCmp[15] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold bg-info" style="width: <%= percentage[15]%>%">
+              <%= percentage[15]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">School  <%= totsol[16]%> - <%= totCmp[16] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold" style="width: <%= percentage[16]%>%">
+              <%= percentage[16]%>%
+            </div>
+          </div>
+          <h6 class="mb-3">Sewerage Operation Control  <%= totsol[17]%> - <%= totCmp[17] %></h6>
+          <div class="progress mb-4" style="height: 20px">
+            <div class="progress-bar progress-bar-striped font-weight-bold bg-success" style="width: <%= percentage[17]%>%">
+              <%= percentage[17]%>%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end of progress / task list -->
+
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+  <div class="footer-copyright text-center py-3">
+    <p>
+      &copy; 2019 Copyright. Made With <i class="fas fa-heart text-danger"></i> by 
+      <span class="text-success">Viral, Daanyaal & Deval</span>
+    </p>
+  </div>
+</footer>
+<!-- end of footer -->
