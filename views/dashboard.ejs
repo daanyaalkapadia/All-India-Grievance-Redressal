@@ -200,7 +200,6 @@
             <table class="table table-dark table-hover text-center">
               <thead>
                 <tr class="text-muted">
-                  <th>#</th>
                   <th>Name</th>
                   <th>Region</th>
                   <th>Mobile</th>
@@ -210,18 +209,17 @@
               <tbody>
                 <% for(var i=0;i<userArray.length && i<6 ;i++){ %>
                   <tr>
-                    <td><%= i+1 %></td>
-                      <% for(var j=0;j<4;j++){ %>
-                        <% if(j==3){ %>
-                          <td>
-                            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=<%= userArray[i][j]%>" target="_blank">
-                              <button type="button" class="btn btn-outline-light btn-sm">E-mail</button>
-                            </a>
-                          </td>
-                        <% }else{ %>
-                          <td><%= userArray[i][j] %></td>
-                        <% } %>
+                    <% for(var j=0;j<4;j++){ %>
+                      <% if(j==3){ %>
+                        <td>
+                          <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=<%= userArray[i][j]%>" target="_blank">
+                            <button type="button" class="btn btn-outline-light btn-sm">E-mail</button>
+                          </a>
+                        </td>
+                      <% }else{ %>
+                        <td><%= userArray[i][j] %></td>
                       <% } %>
+                    <% } %>
                   </tr>
                 <% } %>
               </tbody>

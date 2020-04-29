@@ -72,7 +72,7 @@ router.post('/forgot',function(req,res){
                 if(err){ console.log(err); }
                 else { console.log(result); }
             });
-            res.render('reset.ejs',{msg:''});
+            res.redirect('./reset');
         }
     });
 });
@@ -86,28 +86,28 @@ router.post('/reset',function(req,res){
     User.findOne({otp:otp},function(err,user){
         if(!user){
             res.render('reset.ejs',{msg:"Invalid OTP"});
-        }
-        if(Math.round((new Date()-new Date(user.date))/1000) > 300){
-            User.updateOne({email:user.email},{otp:none,date:none},function(err,result){});
-            res.render('reset.ejs',{msg:"OTP Expired"});
-        }
-        else{
-            if(newpassword1 === newpassword2){
-                if(newpassword1.length>=6){
-                    bcrypt.hash(newpassword1, 10, function(err, hash) {
-                        var myquery = { email: user.email };
-                            var newvalues = {$set: {password: hash,otp:null,date: null} };
-                            User.updateOne(myquery, newvalues, function(err, res) {
-                              if (err) throw err;
-                            });
-                            res.render('login.ejs');
-                    });
-                }else{
-                    res.render('reset.ejs',{msg : "Password Not Updated!Password Should be atleast 6 character" });
-                }
-
+        }else{
+            if(Math.round((new Date()-new Date(user.date))/1000) > 300){
+                User.updateOne({email:user.email},{otp:'',date:''},function(err,result){});
+                res.render('reset.ejs',{msg:"OTP Expired"});
             }else{
-                res.render('reset.ejs',{msg : "Password Not Updated! Both New Password not Matched" });
+                if(newpassword1 === newpassword2){
+                    if(newpassword1.length>=6){
+                        bcrypt.hash(newpassword1, 10, function(err, hash) {
+                            var myquery = { email: user.email };
+                                var newvalues = {$set: {password: hash,otp:null,date: null} };
+                                User.updateOne(myquery, newvalues, function(err, res) {
+                                  if (err) throw err;
+                                });
+                                res.redirect('./users/login');
+                        });
+                    }else{
+                        res.render('reset.ejs',{msg : "Password Not Updated!Password Should be atleast 6 character" });
+                    }
+    
+                }else{
+                    res.render('reset.ejs',{msg : "Password Not Updated! Both New Password not Matched" });
+                }
             }
         }
     });
