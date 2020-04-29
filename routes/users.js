@@ -395,13 +395,13 @@ router.get("/redressing/:user/:complaint/:redirection",ensureAuthenticated,funct
             "<br>"+"Feel free to contact us<br> E-mail: "+ req.user.email
 
         const oauth2Client = new OAuth2(
-            "683518118967-pcbst9mtj1vmnaveiv9v2q615btdchlk.apps.googleusercontent.com", // ClientID
-            "q-Wr-YL2fjw9qlq1_KGNRJEi", // Client Secret
-            "https://developers.google.com/oauthplayground" // Redirect URL
+            "", // ClientID
+            "", // Client Secret
+            "" // Redirect URL
         );
         
         oauth2Client.setCredentials({
-            refresh_token: "1//04dFbeGGzDh3wCgYIARAAGAQSNwF-L9IrRTdCOXCZVtddDgKjLv-kKCyJd4mJW2ep5q7HGEc1DFmNny3wGobW8C4plS3wH97Qt7g"
+            refresh_token: ""
         });
 
         const accessToken = oauth2Client.getAccessToken()
@@ -411,9 +411,9 @@ router.get("/redressing/:user/:complaint/:redirection",ensureAuthenticated,funct
             auth: {
                  type: "OAuth2",
                  user: "allindiagrievanceredressalapp@gmail.com", 
-                 clientId: "683518118967-pcbst9mtj1vmnaveiv9v2q615btdchlk.apps.googleusercontent.com",
-                 clientSecret: "q-Wr-YL2fjw9qlq1_KGNRJEi",
-                 refreshToken: "1//04dFbeGGzDh3wCgYIARAAGAQSNwF-L9IrRTdCOXCZVtddDgKjLv-kKCyJd4mJW2ep5q7HGEc1DFmNny3wGobW8C4plS3wH97Qt7g",
+                 clientId: "",
+                 clientSecret: "",
+                 refreshToken: "",
                  accessToken: accessToken
             }
         });
