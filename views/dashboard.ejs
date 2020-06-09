@@ -1,0 +1,261 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-md navbar-light">
+  <button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse" data-target="#myNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- sidebar -->
+        <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+          <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border">
+            All India Grievance <br>Redressal App
+          </a>
+          <div class="bottom-border pb-3">
+            <p class="text-white text-center">Hello, <%=name%> !</p>
+          </div>
+          <ul class="navbar-nav flex-column mt-4">
+            <li class="nav-item">
+              <a href="#" id="dash" class="nav-link text-white p-3 mb-2 current">
+                <i class="fas fa-home text-light fa-lg mr-3"></i>
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/profile" class="nav-link text-white p-3 mb-2 sidebar-link">
+                <i class="fas fa-user text-light fa-lg mr-3"></i>
+                Profile
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/analysis" class="nav-link text-white p-3 mb-2 sidebar-link">
+                <i class="fas fa-chart-line text-light fa-lg mr-3"></i>
+                Analytics
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/pending" class="nav-link text-white p-3 mb-2 sidebar-link">
+                <i class="fas fa-hand-paper text-light fa-lg mr-3"></i>
+                Pending
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/partiallysolved" class="nav-link text-white p-3 mb-2 sidebar-link">
+                <i class="fas fa-hourglass-half text-light fa-lg mr-3"></i>
+                Partially Solved
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/redressed" class="nav-link text-white p-3 mb-2 sidebar-link">
+                <i class="far fa-check-circle text-light fa-lg mr-3"></i>
+                Redressed
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- end of sidebar -->
+
+        <!-- top-nav -->
+        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-dark fixed-top py-2 top-navbar">
+          <div class="row align-items-center">
+            <div class="col-md-4">
+              <h4 class="text-light text-uppercase mb-0">
+                <a href="/dashboard">
+                  <i class="fas fa-sync mr-3 text-light"></i>
+                </a>
+              </h4>
+            </div>
+            <div class="col-md-5">
+              <h4 class="text-light text-uppercase text-center"><%=state%>-Admin</h4>
+            </div>
+            <div class="col-md-3">
+              <ul class="navbar-nav float-right">
+                <a href="/users/logout">
+                  <li class="nav-item ml-md-auto float-right">
+                    <i class="fas fa-sign-out-alt text-danger fa-lg"></i>
+                    <p class="float-right text-white">&nbsp LogOut</p>
+                  </li>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end of top-nav -->
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- end of navbar -->
+
+<!-- cards -->
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+        <div class="row pt-md-5 mt-md-3 mb-5">
+          <div class="col-xl-3 col-sm-6 p-2">
+            <div class="card card-common">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <i class="far fa-hand-point-up fa-3x text-warning"></i>
+                  <div class="text-right text-secondary">
+                    <h5>Total Complaint</h5>
+                    <h3>
+                      <%= totalcount %>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 p-2">
+            <div class="card card-common">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <i class="far fa-check-circle fa-3x text-success"></i>
+                  <div class="text-right text-secondary">
+                    <h5>Total Redressed</h5>
+                    <h3>
+                      <%= totalredressed %>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 p-2">
+            <div class="card card-common">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <i class="fas fa-hand-paper text-danger fa-3x mr-3"></i>
+                  <div class="text-right text-secondary">
+                    <h5>Total Pending</h5>
+                    <h3>
+                      <%= totalpending %>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 p-2">
+            <div class="card card-common">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <i class="fas fa-users fa-3x text-info"></i>
+                  <div class="text-right text-secondary">
+                    <h5>Users</h5>
+                    <h3>
+                      <%= totalusers %>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end of cards -->
+
+<!-- tables -->
+<section>
+  <div class="container-fluid">
+    <div class="row mb-5">
+      <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+        <div class="row align-items-center">
+          <div class="col-xl-6 col-12 mb-4 mb-xl-0">
+            <br>
+            <h3 class="text-muted text-center mb-3">
+              Admin of different states
+            </h3>
+            <table class="table table-striped bg-light text-center">
+              <thead>
+                <tr class="text-muted">
+                  <th>Sr.No.</th>
+                  <th>Name</th>
+                  <th>State</th>
+                  <th>Message</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for(var i=0 ; i < 5 ; i++ ){ %>
+                  <tr>
+                    <td><%= i+1 %></td>
+                    <td><%= tableData[i].name %></td>
+                    <td><%= tableData[i].state %></td>
+                    <td>
+                      <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=<%= tableData[i].email %>" target="_blank">
+                        <button type="button" class="btn btn-outline-success">
+                        email
+                        </button>
+                      </a>
+                    </td>
+                  </tr>
+                  <% } %>
+              </tbody>
+            </table>
+            <a href="/adminlist">
+              <button type="button" class="btn btn-outline-info">See More Admins...</button>
+            </a>
+          </div>
+          <div class="col-xl-6 col-12">
+            <% if(userArray.length != 0 ){ %>
+              <h3 class="text-muted text-center mb-3">List of Users</h3>
+            <% }else{ %>
+              <h3 class="text-muted text-center mb-3">No Registered User</h3>
+              <% } %>
+            <table class="table table-dark table-hover text-center">
+              <thead>
+                <% if(userArray.length != 0 ){ %>
+                  <tr class="text-muted">
+                    <th>Name</th>
+                    <th>Region</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                  </tr>
+                <% } %>
+              </thead>
+              <tbody>
+                <% for(var i=0;i<userArray.length && i<6 ;i++){ %>
+                  <tr>
+                    <% for(var j=0;j<4;j++){ %>
+                      <% if(j==3){ %>
+                        <td>
+                          <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=<%= userArray[i][j]%>" target="_blank">
+                            <button type="button" class="btn btn-outline-light btn-sm">E-mail</button>
+                          </a>
+                        </td>
+                      <% }else{ %>
+                        <td><%= userArray[i][j] %></td>
+                      <% } %>
+                    <% } %>
+                  </tr>
+                <% } %>
+              </tbody>
+            </table>
+            <% if(userArray.length >6){ %>
+              <a href="/userlist">
+                <button type="button" class="btn btn-outline-dark">View More...</button>
+              </a>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end of tables -->
+
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+  <div class="footer-copyright text-center py-3">
+    <p>
+      &copy; 2019 Copyright. Made With <i class="fas fa-heart text-danger"></i> by 
+      <span class="text-success">Viral, Daanyaal & Deval</span>
+    </p>
+  </div>
+</footer>
+<!-- end of footer -->

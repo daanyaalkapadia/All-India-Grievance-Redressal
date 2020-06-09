@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "all-india-grievance-app",
+  "private_key_id": "9514978100b3c20874d17a1c4103c61f75235a9f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDgNF+DY/a63ivi\n1xahkFrZ4BlvzAEjlceLbKiDLygQ04BlREVJdgKIFGwLw6quyEtrZGk8RFxp1JhZ\nsjGSHQ23hbknBCDTk+G5uxBz8Ug8fSJm8Q85HH+nDuCO7XsYU5saE5/zNzUYCJZZ\nqGcCZm44COlS2tmLBf3seTG/Lt8u2AXTIM/8wCI/xfxVcxeRAwVtJf/3Vf1CMEMs\nrGycZciPrJ93onuAlLCnsNOpe6vutfYzExtsQ2Ygv8rs3qp6ojDOac21XKoNX5mo\nVBwtaPmgBABO2CvKknPEpqFPy85nAkdv6dA9PMFywkChId2W7tINtWH5Br7PG8Uw\n977TZuJFAgMBAAECggEAFgWUPh5tp87WZlpfFYZ4I1S2MDt2/yz2jnTL8SVgHOr7\n/mEKzIY5WxllFXC7d/MiKU28Ym2KhYtFXZtkRWhHe80NhyNfgA399WrGLm/hewOF\ng1v5H/sdyhBq288VW1SBnw7qE+R1JBkFKjr2xzm9aLvuAwk4+0VJkCvFSEniemy8\nHAqEo3a1WjcJgM0kH2SC0VNxMjdcjsygUSswzfjAj9dm+6p6B0lEknvWG4XeA6DG\nTZYNdAfPuxMjDaRo2SqdxoqDqUpT9P6h4XDUxpgqVK0OYOe+/mF3pi3yNyJPgDAB\nZZiiq1IRp56j6MZu4jKifctve84jafFxgblruLoeTwKBgQDwA3hEjadhFXROPGbi\nYn0xnlH2kMeP2uKSs9cqU4VnL/78G76LFFzkQgbobHjnUV+Tc7G17zJyOuR3IqiC\nyvmDLv+ETCRg/t3YB8KwKIAc89oArMfTTa1q2/9E7uK7LZDgdVgmB0WgMszl1LL0\n+wAaGRk5hbvNxsbBdkNTo7cO4wKBgQDvI1c0BASbB6NiL2YWvLfjY/+OcsNec1pR\naYjvweeajtNurO2VAMvuNfAZ3CC2b+cwBWSaWE1uWe9Cf8dTYEZP0IS3791zHOSg\njmzJOj+2xbT4JsFE1/KMZ+yW9jjpqL/qkFubsmSrB2HALgvHKHtydIzIZ7jC/XDo\nbYXFkZ4qtwKBgE1RUNUErP7hYm4xlxMmlx382nqLeT4mTQblWFMSRM9Q7ttYNLGp\nBaOigYcuKmSaGifuBTmOrLmPrzmRuKcpq+dOpJGB1dZJRD3rghQtd9fb1kaRYm33\nf/4EkN8r9W5G53znUFYv0YYh10/SjTPOB+JgY3fcVPudJTn9VwMCol3xAoGAFEuR\niQ6WPXoGebzAE0ns6VWBSNugjRGJJsOoJYD1YP6iHxB6EV1B8XOObwNpm1If8sli\nYl8AI09qqOAjUIYpMXjm6p1m0/AtzxqHTQSuh5p741uWp3sUUKo5QA6hgeMadpPN\n0obvWDyGJUNDKKHc6DfQAuoamiHcRT2WTtAu9j0CgYEAxPXiQRjKNA1lOcDNvRRv\nzHtbxvvBAmb248weHshDdW2b1HkhKQs42rHx1ul2mjEHqsLZYIzpEwey0QDmhmWc\nQLgAsAmjuniE6fDGMaAZ16kpFJOCqruk3GPxFlsFBqKMhI5FaoHbibSDA68BPm0z\nu66EvijqLA/D7vT3Y6Ub74s=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-9rmji@all-india-grievance-app.iam.gserviceaccount.com",
+  "client_id": "106827204532660649287",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-9rmji%40all-india-grievance-app.iam.gserviceaccount.com"
+}
