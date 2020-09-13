@@ -10,14 +10,14 @@ const app   = express();
 //Firebase Setup
 var firebase = require('firebase');
 var firebaseConfig = {
-    apiKey: "AIzaSyA4efHd6EbCDNSsAnNtT8kzdSXcHhbvfto",
-    authDomain: "all-india-grievance-app.firebaseapp.com",
-    databaseURL: "https://all-india-grievance-app.firebaseio.com",
-    projectId: "all-india-grievance-app",
-    storageBucket: "all-india-grievance-app.appspot.com",
-    messagingSenderId: "44004433146",
-    appId: "1:44004433146:web:56857ca37a36f351163d43",
-    measurementId: "G-B256703JWQ"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
 };
 
 // Initialize Firebase
